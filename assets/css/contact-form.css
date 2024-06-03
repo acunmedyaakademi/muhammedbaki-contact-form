@@ -1,0 +1,347 @@
+@font-face {
+  font-family: karla;
+  src: url("../fonts/Karla-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: karla;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: rgba(224, 241, 232, 1);
+}
+
+.message-sent {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 24px;
+  background-color: rgba(42, 65, 68, 1);
+  padding: 24px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.message-sent h3 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.message-sent {
+  display: none;
+}
+
+.contact-us {
+  margin: 0 auto;
+  width: 736px;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: white;
+  margin-top: 128px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contact-us h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -1px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.names {
+  display: flex;
+  gap: 16px;
+}
+
+.firstname {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstname input {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(134, 162, 165, 1);
+}
+
+.firstname p {
+  margin-bottom: 8px;
+}
+
+.firstname span {
+  color: rgba(12, 125, 105, 1);
+}
+
+.lastname {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lastname input {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(134, 162, 165, 1);
+}
+
+.lastname p {
+  margin-bottom: 8px;
+}
+
+.lastname span {
+  color: rgba(12, 125, 105, 1);
+}
+
+
+.email {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.email input {
+  width: 656px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(134, 162, 165, 1);
+}
+
+.email p {
+  margin-bottom: 8px;
+}
+
+.email span {
+  color: rgba(12, 125, 105, 1);
+}
+
+.querytypes {
+  width: 656px;
+  display: flex;
+  flex-direction: column;
+}
+
+.querytypes p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+
+}
+
+.querytypes-inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.querytypes-inputs p {
+  width: 320px;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: 1px solid rgba(134, 162, 165, 1);
+}
+
+.querytypes p {
+  margin-bottom: 8px;
+}
+
+.querytypes span {
+  color: rgba(12, 125, 105, 1);
+}
+
+
+.message {
+  width: 656px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message p {
+  margin-bottom: 8px;
+}
+
+.message span {
+  color: rgba(12, 125, 105, 1);
+}
+
+.precondition {
+  margin-block: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.precondition span {
+  color: rgba(12, 125, 105, 1);
+}
+
+.submit {
+  width: 656px;
+  padding-block: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
+  background-color: rgba(12, 125, 105, 1);
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+@media (width < 768px) {
+  .contact-us {
+    margin: 0 auto;
+    width: 690px;
+    border-radius: 20px;
+    padding: 40px;
+    background-color: white;
+    margin-top: 128px;
+  }
+
+  .firstname {
+    width: 295px;
+  }
+
+  .lastname {
+    width: 295px;
+  }
+
+  .email {
+    width: 320px;
+  }
+
+  .email input {
+    width: 610px;
+  }
+
+  .querytypes {
+    width: 610px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .message {
+    width: 610px;
+  }
+
+  .submit {
+    width: 610px;
+  }
+
+}
+
+
+@media (width < 375px) {
+  .contact-us {
+    width: 343px;
+    padding: 24px;
+    margin-top: 32px;
+  }
+
+  .names {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .firstname {
+    width: 295px;
+  }
+
+  .lastname {
+    width: 295px;
+  }
+
+  .email {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email input {
+    width: 295px;
+  }
+
+  .querytypes {
+    width: 295px;
+  }
+
+  .querytypes-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .querytypes-inputs p{
+    width: 295px;
+  }
+
+  .message {
+    width: 295px;
+  }
+
+  .submit {
+    width: 295px;
+  }
+
+}

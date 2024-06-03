@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bize ulaşın</title>
+  <link rel="stylesheet" href="assets/css/contact-form.css">
 </head>
+
 <body>
+
+  <div class="message-sent">
+    <h3><img src="assets/img/Check.png" alt=""> Mesaj gönderildi! </h3>
+    <p>Formu doldurduğunuz için teşekkür ederiz. Yakında sizinle iletişime geçeceğiz!</p>
+  </div>
+
   <form class="contact-us">
-    <h1>Bize ulaşın</h1>
-    <label for="firstname"> İsim <span>*</span>
-      <input type="text" id="firstname">
+    <h1> Bize ulaşın</h1>
+
+    <div class="names">
+      <label for="firstname" class="firstname"> <p>İsim <span>*</span></p>
+        <input type="text">
+      </label>
+  
+      <label for="lastname" class="lastname"> <p>Soyisim <span>*</span></p>
+        <input type="text">
+      </label></div>
+
+    <label for="email" class="email"> <p>E-posta Adresi <span>*</span></p>
+      <input type="email">
     </label>
-    <label for="lastname" id="lastname"> Soyisim <span>*</span>
-      <input type="text" id="lastname">
-    </label> <br>
-    <label for="email">E-posta Adresi <span>*</span>
-      <input type="email" id="email">
+
+    <div class="querytypes">
+       <p>Sorgu Türü <span>*</span></p>
+      <div class="querytypes-inputs">
+        <p><input type="radio" name="1" value="1">Genel Sorgulama</p>
+        <p><input type="radio" name="1" value="1">Destek Talebi  </p>
+      </div>
+      </div>
+      
+    <label for="message" class="message">
+      <p>Mesaj <span>*</span></p>
+      <textarea name="message" rows="5"></textarea>
     </label>
-    <label for="querytype">
-      <input type="radio" id="querytype">Genel Sorgulama 
-      <input type="radio" id="querytype">Destek Talebi
-    </label>
-    <label for="querytype">Sorgu Türü
-      <input type="radio" id="querytype">Genel Sorgulama 
-      <input type="radio" id="querytype">Destek Talebi
-    </label>
-    <label for="message">
-      <textarea name="message" rows="20"></textarea>
-    </label>
-    <input type="checkbox">
+
+    <div class="precondition">
+      <input type="checkbox">
+      <p>Ekip tarafından benimle iletişime geçilmesine izin veriyorum <span>*</span></p>
+
+    </div>
+
+    <button class="submit">Gönder</button>
   </form>
+
+  <div class="show">
+    
+  </div>
 </body>
+
 </html>
