@@ -104,6 +104,18 @@ function handleFormClick(e) {
   } else {
     checkboxuyari.innerText = "";
   }
+  
+  firstname.value = "";
+  lastname.value = "";
+  email.value = "";
+  textarea.value = "";
+  sorgu1.checked = false;
+  sorgu2.checked = false;
+  checkbox.checked = false;
+  querytypes2.style.background = "white";
+  querytypes2.style.border = "1px solid rgba(134, 162, 165, 1)";
+  querytypes1.style.background = "white";
+  querytypes1.style.border = "1px solid rgba(134, 162, 165, 1)";
 }
 
 submit.addEventListener("click", handleFormClick);
