@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bize ulaşın</title>
   <link rel="stylesheet" href="assets/css/contact-form.css">
+  <script src="assets/js/contact-form.js" defer></script>
 </head>
 
 <body>
@@ -19,42 +20,79 @@
     <h1> Bize ulaşın</h1>
 
     <div class="names">
-      <label for="firstname" class="firstname"> <p>İsim <span>*</span></p>
-        <input type="text">
+      <label for="firstname" class="firstname">
+        <p>İsim <span>*</span></p>
+        <input type="text" class="firstname-input">
+        <p class="uyari-firstname">Bu alan zorunludur</p>
       </label>
-  
-      <label for="lastname" class="lastname"> <p>Soyisim <span>*</span></p>
-        <input type="text">
-      </label></div>
 
-    <label for="email" class="email"> <p>E-posta Adresi <span>*</span></p>
-      <input type="email">
+      <label for="lastname" class="lastname">
+        <p>Soyisim <span>*</span></p>
+        <input type="text" class="lastname-input">
+        <p class="uyari-lastname">Bu alan zorunludur</p>
+      </label>
+    </div>
+
+    <label for="email" class="email">
+      <p>E-posta Adresi <span>*</span></p>
+      <input type="email"  class="mail-input" name="email" id="email" autocomplete="off" required="required">
+      <p class="uyari-email">Lütfen geçerli bir e-posta adresi girin</p>
     </label>
 
     <div class="querytypes">
-       <p>Sorgu Türü <span>*</span></p>
+      <p>Sorgu Türü <span>*</span></p>
       <div class="querytypes-inputs">
-        <p><input type="radio" name="1" value="1">Genel Sorgulama</p>
-        <p><input type="radio" name="1" value="1">Destek Talebi  </p>
+        <p class="querytypes-input-1"><input type="radio" class="querytypes-input" id="sorgu1" name="1" value="1"><span class="sorgu1text">Genel
+            Sorgulama</span></p>
+        <p class="querytypes-input-2"><input type="radio" class="querytypes-input" id="sorgu2" name="1" value="1"><span class="sorgu2text">Destek
+            Talebi</span> </p>
       </div>
-      </div>
-      
+      <p class="uyari-sorgu">Lütfen bir sorgu türü seçin</p>
+    </div>
+
     <label for="message" class="message">
       <p>Mesaj <span>*</span></p>
-      <textarea name="message" rows="5"></textarea>
+      <textarea name="message" rows="5" class="textarea"></textarea>
+      <p class="uyari-message">Bu alan zorunludur</p>
     </label>
 
     <div class="precondition">
-      <input type="checkbox">
+      <input type="checkbox" class="checkbox">
       <p>Ekip tarafından benimle iletişime geçilmesine izin veriyorum <span>*</span></p>
-
     </div>
+    <p class="checkbox-uyari">Bu formu göndermek için lütfen sizinle iletişime geçilmesine izin verin</p>
 
     <button class="submit">Gönder</button>
   </form>
 
   <div class="show">
-    
+
+    <div class="show-names">
+      <div>
+        <h4>İsim</h4>
+        <p class="show-name"></p>
+      </div>
+      <div>
+        <h4>Soyisim</h4>
+        <p class="show-lastname"></p>
+      </div>
+    </div>
+
+    <div>
+      <h4>E-Posta</h4>
+      <p class="show-email"></p>
+    </div>
+
+    <div>
+      <h4>Sorgu Türü</h4>
+      <p class="show-query"></p>
+    </div>
+
+    <div>
+      <h4>Kullanıcının Mesajı</h4>
+      <p class="show-message"></p>
+    </div>
+
   </div>
 </body>
 

@@ -35,7 +35,10 @@ button,
 textarea,
 select {
   font: inherit;
+  cursor: pointer;
+  outline: none;
 }
+
 
 p,
 h1,
@@ -56,6 +59,7 @@ body {
   background-color: rgba(224, 241, 232, 1);
 }
 
+
 .message-sent {
   width: 450px;
   margin: 0 auto;
@@ -67,7 +71,10 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: white;
-  display: flex;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 225px);
+  display: none;
   flex-direction: column;
   gap: 8px;
 }
@@ -78,9 +85,6 @@ body {
   align-items: center;
 }
 
-.message-sent {
-  display: none;
-}
 
 .contact-us {
   margin: 0 auto;
@@ -119,6 +123,9 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(134, 162, 165, 1);
 }
+.firstname input:hover {
+  border: 1px solid rgba(12, 125, 105, 1);
+}
 
 .firstname p {
   margin-bottom: 8px;
@@ -139,6 +146,9 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(134, 162, 165, 1);
 }
+.lastname input:hover {
+  border: 1px solid rgba(12, 125, 105, 1);
+}
 
 .lastname p {
   margin-bottom: 8px;
@@ -153,6 +163,9 @@ body {
   width: 320px;
   display: flex;
   flex-direction: column;
+}
+.email input:hover {
+  border: 1px solid rgba(12, 125, 105, 1);
 }
 
 .email input {
@@ -185,9 +198,11 @@ body {
 }
 
 .querytypes-inputs {
+  border-radius: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -196,6 +211,8 @@ body {
   width: 320px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
   gap: 14px;
   padding: 12px 24px;
   border-radius: 10px;
@@ -206,7 +223,7 @@ body {
   margin-bottom: 8px;
 }
 
-.querytypes span {
+.querytypes>span {
   color: rgba(12, 125, 105, 1);
 }
 
@@ -221,6 +238,16 @@ body {
   margin-bottom: 8px;
 }
 
+textarea {
+  border-radius: 10px;
+  padding: 12px 24px;
+  border: 1px solid rgba(134, 162, 165, 1);
+}
+.textarea:hover {
+  border: 1px solid rgba(12, 125, 105, 1);
+}
+
+
 .message span {
   color: rgba(12, 125, 105, 1);
 }
@@ -230,6 +257,10 @@ body {
   display: flex;
   flex-direction: row;
   gap: 16px;
+}
+
+.precondition input {
+  accent-color: rgba(12, 125, 105, 1);
 }
 
 .precondition span {
@@ -247,6 +278,118 @@ body {
   border: none;
   color: white;
   border-radius: 10px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid rgba(12, 125, 105, 1);
+}
+
+input[type="email"]:focus {
+  border: 1px solid rgba(12, 125, 105, 1);
+}
+
+textarea:focus {
+  border: 1px solid rgba(12, 125, 105, 1);
+}
+
+.querytypes-input {
+  accent-color: rgba(12, 125, 105, 1);
+}
+
+.querytypes-input:active>.querytypes-inputs p {
+  background-color: rgba(12, 125, 105, 1);
+}
+
+.show {
+  margin: 0 auto;
+  width: 736px;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: white;
+  margin-top: 128px;
+  display: none;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.show * {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.show h4 {
+  background-color: rgba(12, 125, 105, 1);
+  padding: 10px;
+  border-radius: 10px;
+  width: 170px;
+  color: white;
+  text-align: center;
+}
+
+.show p {
+  border: 1px solid rgba(12, 125, 105, 1);
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: black;
+  text-align: center;
+}
+
+
+.uyari-firstname {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(215, 60, 60, 1);
+}
+
+.uyari-lastname {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(215, 60, 60, 1);
+}
+
+.uyari-email {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(215, 60, 60, 1);
+}
+
+.uyari-sorgu {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(215, 60, 60, 1);
+}
+
+.uyari-message {
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(215, 60, 60, 1);
+}
+
+.checkbox-uyari {
+  margin-top: -20px;
+  display: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(215, 60, 60, 1);
 }
 
 @media (width < 768px) {
@@ -289,6 +432,10 @@ body {
     width: 610px;
   }
 
+  .show {
+    width: 690px;
+    padding: 20px;
+  }
 }
 
 
@@ -332,7 +479,8 @@ body {
     flex-direction: column;
     gap: 16px;
   }
-  .querytypes-inputs p{
+
+  .querytypes-inputs p {
     width: 295px;
   }
 
@@ -344,4 +492,15 @@ body {
     width: 295px;
   }
 
+  .show {
+    width: 343px;
+    padding: 20px;
+  }
+
+  .show * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
