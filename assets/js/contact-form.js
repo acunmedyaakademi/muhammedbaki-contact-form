@@ -32,6 +32,8 @@ let checkboxuyari = document.querySelector(".checkbox-uyari");
 function handleFormClick(e) {
   e.preventDefault();
 
+
+
   if (
     (firstname.value !== "",
     lastname.value !== "",
@@ -51,7 +53,11 @@ function handleFormClick(e) {
     setTimeout(function () {
       messagesent.style.display = "none";
     }, 1500);
+
+
+
   }
+
 
   if (sorgu1.checked === true) {
     showquery.innerText = sorgu1text.innerText;
@@ -61,6 +67,8 @@ function handleFormClick(e) {
     showquery.innerText = "";
   }
 
+
+
   if (firstname.value === "") {
     uyarifirstname.style.display = "flex";
     firstname.style.border = "1px solid rgba(215, 60, 60, 1)";
@@ -68,6 +76,8 @@ function handleFormClick(e) {
     uyarifirstname.innerText = "";
     firstname.style.border = "1px solid rgba(134, 162, 165, 1)";
   }
+
+
 
   if (lastname.value === "") {
     uyarilastname.style.display = "flex";
@@ -77,6 +87,8 @@ function handleFormClick(e) {
     lastname.style.border = "1px solid rgba(134, 162, 165, 1)";
   }
 
+
+
   if (email.value === "") {
     uyariemail.style.display = "flex";
     email.style.border = "1px solid rgba(215, 60, 60, 1)";
@@ -85,11 +97,15 @@ function handleFormClick(e) {
     email.style.border = "1px solid rgba(134, 162, 165, 1)";
   }
 
+
+
   if (sorgu1.checked === false && sorgu2.checked === false) {
     uyarisorgu.style.display = "flex";
   } else {
     uyarisorgu.innerText = "";
   }
+
+
 
   if (textarea.value === "") {
     uyarimessage.style.display = "flex";
@@ -99,12 +115,16 @@ function handleFormClick(e) {
     textarea.style.border = "1px solid rgba(134, 162, 165, 1)";
   }
 
+
+
   if (checkbox.checked === false) {
     checkboxuyari.style.display = "flex";
   } else {
     checkboxuyari.innerText = "";
   }
   
+
+
   firstname.value = "";
   lastname.value = "";
   email.value = "";
@@ -122,6 +142,7 @@ submit.addEventListener("click", handleFormClick);
 
 for (let i = 0; i < querytypesradio.length; i++) {
   querytypesradio[i].onclick = function handleRadioClick() {
+
     if (sorgu1.checked === true) {
       querytypes1.style.background = "rgba(224, 241, 232, 1)";
       querytypes1.style.border = "1px solid rgba(12, 125, 105, 1)";
@@ -129,6 +150,8 @@ for (let i = 0; i < querytypesradio.length; i++) {
       querytypes1.style.background = "white";
       querytypes1.style.border = "1px solid rgba(134, 162, 165, 1)";
     }
+
+    
 
     if (sorgu2.checked === true) {
       querytypes2.style.background = "rgba(224, 241, 232, 1)";
